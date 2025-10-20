@@ -39,11 +39,13 @@ The project's source code is currently not open-sourced. New resources will be g
 
 ## 📊 Baselines for Reproduction
 
-To reproduce comparative results, the following baseline implementations are available:
+To reproduce comparative results, the following open-source baseline implementations are available:
 
-- **Reference RTOS A**: https://github.com/baseline-rtos/rtos-a
-- **Reference Framework B**: https://gitlab.com/rt-frameworks/framework-b
-- **Comparative System C**: https://bitbucket.org/rt-systems/system-c
+- **FreeRTOS**: https://github.com/FreeRTOS/FreeRTOS-Kernel
+- **Zephyr**: https://github.com/zephyrproject-rtos/zephyr
+- **RT-Thread**: https://github.com/RT-Thread/rt-thread
+- **RTEMS**: https://github.com/RTEMS/rtems/tree/5.1
+- **Linux-RT**: https://github.com/clrkwllms/rt-linux
 
 ## 🔧 Evaluation Scripts
 
