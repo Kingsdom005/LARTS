@@ -5,7 +5,7 @@ This repository contains evaluation scripts and resources for the real-time syst
 
 The framework is built on a layered architecture:
 
-<img src="C:\Users\liyanqi\AppData\Roaming\Typora\typora-user-images\image-20251020225827483.png" alt="image-20251020225827483" style="zoom:90%;" />
+<img src="./overview.png" alt="overview" style="zoom:90%;" />
 
 **Programming Model & Tooling Layer**
 
@@ -27,11 +27,6 @@ The framework is built on a layered architecture:
 - Hardware support for ARM Cortex-A platforms
 - Low-level system primitives and isolation mechanisms
 
-The evaluation is divided into three stages:
-
-1. **Static Analysis**: Compute system dependencies and timing characteristics
-2. **Kernel Compilation**: Build the real-time enhanced kernel with specific configurations
-3. **Benchmark Execution**: Run comprehensive real-time performance tests
 
 ## 📋 Quick Start Example
 
