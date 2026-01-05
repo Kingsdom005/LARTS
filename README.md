@@ -27,10 +27,11 @@ The framework is built on a layered architecture:
 - Hardware support for ARM Cortex-A platforms
 - Low-level system primitives and isolation mechanisms
 
+## 📋 Quick Start
 
-## 📋 Quick Start Example
+The project's source code is currently not open-sourced. We have made available certain binary programs compiled using the LARTS kernel.
 
-The project's source code is currently not open-sourced. New resources will be gradually open-sourced in the future.
+
 
 ## 📊 Baselines for Reproduction
 
