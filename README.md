@@ -92,7 +92,11 @@ Certain private toolchain resources and repositories (e.g., musl ulib) will not 
 
 ## 📈 Available Resources
 
-We will gradually make thesis-related resources available.
+Currently available resources:
+
+* [LARTS Demo(armv7&armv8)](https://github.com/Kingsdom005/LARTS/releases/tag/Test)
+
+We will gradually make more resources available.
 
 ## 🔄 Future Releases
 
