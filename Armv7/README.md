@@ -1,56 +1,28 @@
 # LARTS: Language Abstractions for Real-Time and Secure Systems
-This repository contains evaluation scripts and resources for the real-time system framework presented in our research. The framework integrates four core subsystems to deliver robust, secure, and predictable real-time performance.
 
 ## 🛠️ Framework 
 
 The framework is built on a layered architecture:
 
-<img src="./overview.png" alt="overview" style="zoom:90%;" />
+<img src="../overview.png" alt="overview" style="zoom:90%;" />
 
-**Programming Model & Tooling Layer**
+## 📋 ARMv7 Quick Start
 
-- Application development using LARTS abstractions
-- LARTS loader for compilation and load-time binding
-- Unified Process-Thread model 
-- Deterministic Memory Domains
-- Deterministic Channels
-- Secure Runtime Semantics
+In armv7, we set a 5000-tick delay on the main thread to facilitate observation of the results.
 
-**Execution Environment Layer**
+Just run the scripts:
 
-- Deterministic execution with isolation domains
-- Predictable and secure application output
-- Real-time guarantees enforcement
+```shell
+cd [project_root]
+# ARMv7 Test
+# change [./Armv7/LARTS_kernel_armv7_test0.exe] to test binary
+qemu-system-arm -serial null -serial mon:stdio -M xilinx-zynq-a9 -m 1024M -gdb tcp::7777 -nographic -no-reboot -append "--video=off --console=/dev/com1" -kernel ./Armv7/LARTS_kernel_armv7_test0.exe
+```
 
-**Underlying Foundation**
+## 📊 Testcase Description
 
-- Hardware support for ARM Cortex-A platforms
-- Low-level system primitives and isolation mechanisms
+Testcase description:
 
-
-## 📋 Quick Start Example
-
-The project's source code is currently not open-sourced. New resources will be gradually open-sourced in the future.
-
-## 📊 Baselines for Reproduction
-
-To reproduce comparative results, the following open-source baseline implementations are available:
-
-- **FreeRTOS**: https://github.com/FreeRTOS/FreeRTOS-Kernel
-- **Zephyr**: https://github.com/zephyrproject-rtos/zephyr
-- **RT-Thread**: https://github.com/RT-Thread/rt-thread
-- **RTEMS**: https://github.com/RTEMS/rtems/tree/5.1
-- **Linux-RT**: https://github.com/clrkwllms/rt-linux
-
-## 🔧 Evaluation Scripts
-
-We will gradually release the tools and scripts for testing.
-
-## 📈 Available Resources
-
-We will gradually make thesis-related resources available.
-
-## 🔄 Future Releases
-
-Thesis-related resources will be available in the future.
-
+* **Test0** : `LARTS_kernel_armv7_test0.exe`  <=> `[project_rootdir]\testsuites\samples\rtems_application\image0.c`
+* **Test1** : `LARTS_kernel_armv7_test1.exe`  <=> `[project_rootdir]\testsuites\samples\rtems_application\image1.c`
+* **Test2** : `LARTS_kernel_armv7_test2.exe`  <=> `[project_rootdir]\testsuites\samples\rtems_application\thread-test\main.c`

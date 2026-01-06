@@ -39,6 +39,7 @@ The project's source code is currently not open-sourced. We have made available 
 # optional(Port Forwarding/File mapping)
 # b7bab04fd9aa (replace your ubuntu20.04 image)
 docker run -it --name LARTS b7bab04fd9aa /bin/bash
+# in docker ubuntu20.04
 # Install dependencies and required components
 apt update && apt install sudo -y
 sudo apt upgrade
@@ -60,16 +61,8 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 mkdir -p /LARTS && cd /LARTS
 git clone https://github.com/Kingsdom005/LARTS.git
 cd ./LARTS
-
 # For armv7 testing, please refer to ./Armv7/README.md
-
 # For armv8 testing, please refer to ./Armv8/README.md
-
-
-# ARMv7 Test
-qemu-system-arm -serial null -serial mon:stdio -M xilinx-zynq-a9 -m 1024M -gdb tcp::7777 -nographic -no-reboot -append "--video=off --console=/dev/com1" -kernel ./Armv7/LARTS_kernel_armv7_test0.exe
-# ARmv8 Test
-qemu-system-aarch64 -gdb tcp::7777 -no-reboot -nographic -serial mon:stdio -machine xlnx-versal-virt -m 4096 -kernel ./Armv8/LARTS_kernel_armv8_test0.exe
 ```
 
 ## 📊 Baselines for Reproduction
@@ -103,7 +96,7 @@ We will gradually make thesis-related resources available.
 
 ## 🔄 Future Releases
 
-We currently provide partial support for the Loongarch64 architecture. Resources related to the Loongson architecture are scheduled for release in February 2026, with plans to support additional architectures and expand functionality in subsequent phases.
+We currently provide partial support for the **Loongarch64 architecture**. Resources related to the Loongson architecture are scheduled for release in February 2026, with plans to support additional architectures and expand functionality in subsequent phases.
 
-All current development and testing is conducted using QEMU. Moving forward, our team will conduct testing on physical hardware and publish relevant test data to advance global operating system research and development.
+All current development and testing is conducted using QEMU. Moving forward, our team will conduct testing on **physical hardware** and publish relevant test data to advance global operating system research and development.
 
