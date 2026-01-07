@@ -1,7 +1,8 @@
 # LARTS: Language Abstractions for Real-Time and Secure Systems
+
 This repository contains evaluation scripts and resources for the real-time system framework presented in our research. The framework integrates four core subsystems to deliver robust, secure, and predictable real-time performance.
 
-## 🛠️ Framework 
+## 🛠️ Framework
 
 The framework is built on a layered architecture:
 
