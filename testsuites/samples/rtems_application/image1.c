@@ -1,5 +1,5 @@
 //
-// Created by dongl on 25-2-27.
+// Created by dongl on 2025/01/23.
 //
 
 #include <sys/user.h>
@@ -17,7 +17,6 @@ int main (int argc, char *argv[])
     printf("\033[31mrtems image1 TEST BEGIN pid[%d] "
            "argv[0] %p : %s\033[0m\n",
            getpid(), argv[0], argv[0]);
-
 
     assert(NULL);
 

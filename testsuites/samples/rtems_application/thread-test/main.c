@@ -1,13 +1,13 @@
 //
-// Created by dongl on 2025/11/5.
+// Created by dongl on 2025/07/05.
 //
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <pthread.h>
-
 #include <sys/user.h>
+
 RTEMS_APPLICATION_USTACKLEN__SET0(0xA00000)
 RTEMS_APPLICATION_UHEAPLEN__SET1(0x3200000)
 RTEMS_APPLICATION_USTACKSZ__SET2(0x200000)

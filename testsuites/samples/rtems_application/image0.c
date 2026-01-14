@@ -1,5 +1,5 @@
 //
-// Created by dongl on 25-2-27.
+// Created by dongl on 2025/02/27.
 //
 
 
@@ -19,8 +19,7 @@
 #include <errno.h>
 #include <time.h>
 #include <mqueue.h>
-//#define _GNU_SOURCE
-//#include <sched.h>
+
 
 RTEMS_APPLICATION_USTACKLEN__SET0(0xA00000)
 RTEMS_APPLICATION_UHEAPLEN__SET1(0x3200000)
