@@ -6,7 +6,7 @@ This repository contains evaluation scripts and resources for the real-time syst
 
 The framework is built on a layered architecture:
 
-<img src="./overview.png" alt="overview" style="zoom:90%;" />
+<img src="https://github.com/Kingsdom005/LARTS/blob/main/overview.png" alt="overview" style="zoom:90%;" />
 
 **Programming Model & Tooling Layer**
 
