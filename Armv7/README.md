@@ -4,7 +4,7 @@
 
 The framework is built on a layered architecture:
 
-<img src="../overview.png" alt="overview" style="zoom:90%;" />
+<img src="https://github.com/Kingsdom005/LARTS/blob/main/overview.png" alt="overview" style="zoom:90%;" />
 
 ## 📋 ARMv7 Quick Start
 
