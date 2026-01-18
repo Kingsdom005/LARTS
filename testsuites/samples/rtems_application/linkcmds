@@ -46,7 +46,7 @@ SECTIONS {
         __data_start__ = .;
         *(.data .data.*)
         __data_end__ = .;
-    } > RAM AT> ROM  /* 物理存储在ROM，运行时拷贝到RAM */
+    } > RAM AT> ROM 
     __data_size = __data_end__ - __data_start__;
 
     .bss (NOLOAD) : ALIGN(0x4) {
