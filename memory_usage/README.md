@@ -1,10 +1,15 @@
-# LARTS: Language Abstractions for Real-Time and Secure Systems
+# Memory usage in LARTS
 
-## 🛠️ Framework
+## 📋 Quick Start
 
-The LARTS programming model is outlined as shown in the figure below.
+In this test case, we set a 5000-tick delay on the main thread to facilitate observation of the results.
 
-<img src="https://github.com/Kingsdom005/LARTS/blob/main/overview.png" alt="overview" style="zoom:90%;" />
+Just run the following commands:
+
+```shell
+cd ./image
+qemu-system-arm -serial null -serial mon:stdio -M xilinx-zynq-a9 -m 1024M -gdb tcp::7777 -nographic -no-reboot -append "--video=off --console=/dev/com1" -kernel ./LARTS_kernel.exe
+```
 
 ---
 

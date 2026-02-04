@@ -1,9 +1,8 @@
 # Error handling in LARTS
 
-
 ## 📋 Quick Start
 
-In this test case, we set a 5000-tick delay on the main thread to facilitate observation of the results.
+In the error handling test case, we set a 5000-tick delay on the main thread to facilitate observation of the results.
 
 Just run the following commands:
 
