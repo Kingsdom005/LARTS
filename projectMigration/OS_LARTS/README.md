@@ -1,22 +1,15 @@
-# LARTS: Language Abstractions for Real-Time and Secure Systems
+# Memory usage in LARTS
 
-## 🛠️ Framework
-
-The LARTS programming model is outlined as shown in the figure below.
-
-<img src="https://github.com/Kingsdom005/LARTS/blob/main/overview.png" alt="overview" style="zoom:90%;" />
-
----
 
 ## 📊 Testcase Description
 
 The memory_usage directory contains the compiled binary files for the user program (./rtems_application/build/bin/), the source code for the user program test cases (./rtems_application/), and the LARTS kernel executable (./image).
 
-We have implemented a memory monitor within the LARTS kernel that can be enabled or disabled via configuration, allowing for easy retrieval of the peak memory usage within the workspace.
+We have implemented a memory monitor within the LARTS kernel that can be enabled or disabled via configuration, allowing for easy retrieval of the peak memory usage.
 
 Within the kernel, we provide the sampling frequency and sampling duration, which can be configured via PERIOD_TICKS and WINDOW_TICKS. Partial implementation and definitions are as follows:
 
-```
+```C
 /* Desired: sampling interval in ticks */
 #define PERIOD_TICKS  50
 

@@ -1,18 +1,11 @@
-# LARTS: Language Abstractions for Real-Time and Secure Systems
+# Error handling in LARTS
 
-## 🛠️ Framework
-
-The LARTS programming model is outlined as shown in the figure below.
-
-<img src="https://github.com/Kingsdom005/LARTS/blob/main/overview.png" alt="overview" style="zoom:90%;" />
-
----
 
 ## 📋 Quick Start
 
 In this test case, we set a 5000-tick delay on the main thread to facilitate observation of the results.
 
-Just run the scripts:
+Just run the following commands:
 
 ```shell
 cd ./image
@@ -27,7 +20,7 @@ The error_handling directory contains the compiled binary files for the user pro
 
 The LARTS kernel can handle and capture numerous error types, including but not limited to cross-domain access and null pointer exceptions. The implementation and source code definitions for certain error types are as follows.
 
-```
+```C
 const char *const fatal_source_text[] = {
         [SIGHUP]    = "SIGHUP    | Hangup detected on controlling terminal, usually caused by session termination or terminal disconnection.",
         [SIGINT]    = "SIGINT    | Keyboard interrupt (Ctrl-C), user requests termination of the foreground domain.",

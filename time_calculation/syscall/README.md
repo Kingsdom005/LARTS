@@ -1,12 +1,6 @@
-# LARTS: Language Abstractions for Real-Time and Secure Systems
+# Syscalls in LARTS
 
-## 🛠️ Framework
-
-The LARTS programming model is outlined as shown in the figure below.
-
-<img src="https://github.com/Kingsdom005/LARTS/blob/main/overview.png" alt="overview" style="zoom:90%;" />
-
----
+把下面内容改为系统调用的。
 
 ## 📊 Testcase Description
 
@@ -16,7 +10,7 @@ We have implemented a memory monitor within the LARTS kernel that can be enabled
 
 Within the kernel, we provide the sampling frequency and sampling duration, which can be configured via PERIOD_TICKS and WINDOW_TICKS. Partial implementation and definitions are as follows:
 
-```
+```C
 /* Desired: sampling interval in ticks */
 #define PERIOD_TICKS  50
 
