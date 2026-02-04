@@ -8,6 +8,19 @@ The LARTS programming model is outlined as shown in the figure below.
 
 ---
 
+## 📋 Quick Start
+
+In this test case, we set a 5000-tick delay on the main thread to facilitate observation of the results.
+
+Just run the scripts:
+
+```shell
+cd ./image
+qemu-system-arm -serial null -serial mon:stdio -M xilinx-zynq-a9 -m 1024M -gdb tcp::7777 -nographic -no-reboot -append "--video=off --console=/dev/com1" -kernel ./LARTS_kernel.exe
+```
+
+---
+
 ## 📊 Testcase Description
 
 The error_handling directory contains the compiled binary files for the user program (./rtems_application/build/bin/), the source code for the user program test cases (./rtems_application/), and the LARTS kernel executable (./image).
