@@ -114,13 +114,6 @@ To reproduce comparative results, the following open-source baseline implementat
 
 <!-- Certain private toolchain resources and repositories (e.g., musl ulib) will not be made publicly available at this time. Additional toolchain resources will be made available in due course.-->
 
-## 📈 Available Resources
-
-Currently available resources:
-
-- [LARTS Demo(armv7&armv8)](https://github.com/Kingsdom005/LARTS/releases/tag/Test)
-
-We will gradually make more resources available.
 
 ## 🔄 Future Releases
 
