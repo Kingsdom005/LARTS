@@ -1,38 +1,60 @@
 # LARTS: Language Abstractions for Real-Time and Secure Systems
 
-This repository contains evaluation scripts and resources for the real-time system framework presented in our research. The framework integrates four core subsystems to deliver robust, secure, and predictable real-time performance.
+This repository provides an artifact package accompanying our research on the LARTS real-time system framework.
+
+Due to confidentiality agreement restrictions, the complete source code for the LARTS framework is currently unavailable for public access. Instead, this repository includes a limited set of representative experimental cases, together with their corresponding test configurations, execution scripts, and evaluation procedures, as used in the paper.
+
+The released materials are designed to:
+
+- Illustrate the experimental methodology adopted in the paper.
+- Enable partial reproduction and validation of reported results.
+- Demonstrate how different categories of experiments are constructed and executed.
 
 ## 🛠️ Framework
 
-The framework is built on a layered architecture:
+The LARTS programming model is outlined as shown in the figure below.
 
 <img src="https://github.com/Kingsdom005/LARTS/blob/main/overview.png" alt="overview" style="zoom:90%;" />
 
-**Programming Model & Tooling Layer**
+---
 
-- Application development using LARTS abstractions
-- LARTS loader for compilation and load-time binding
-- Unified Process-Thread model 
-- Deterministic Memory Domains
-- Deterministic Channels
-- Secure Runtime Semantics
+## Repository Structure
 
-**Execution Environment Layer**
+Below is a high-level view of the repository layout (focused on the artifact and reproduction components):
 
-- Deterministic execution with isolation domains
-- Predictable and secure application output
-- Real-time guarantees enforcement
+```text
+LARTS/
+├── cross_architecture/
+│   ├── Armv7/                  # Prebuilt images and instructions for ARMv7 (Cortex-A9 on QEMU)
+│   ├── Armv8/                  # Prebuilt images and instructions for ARMv8 (Cortex-A72 on QEMU)
+│   └── README.md
+├── error_handling/             # Robustness & fault-handling artifact case(s)
+│   ├── image/                  # Prebuilt images
+│   ├── rtems_application/      # user source code
+│   └── README.md
+├── memory_usage/               # Memory footprint artifact case(s)
+│   ├── image/                  # Prebuilt images
+│   ├── rtems_application/      # user source code
+│   └── README.md
+├── time_calculation/           # time cost
+│   ├── context-switch/         # time cost of context switch
+│   ├── syscall/                # time cost of syscall
+│   └── README.md
+├── projectMigration/           # Migration effort artifact case(s) (e.g., Linux → LARTS)
+│   ├── image/                  # Prebuilt images
+│   ├── rtems_application/      # user source code
+│   └── README.md
+├── other/*                     # other materials (if any)
+└── testsuites/*                # Test suite sources used for evaluation
+...
 
-**Underlying Foundation**
-
-- Hardware support for ARM Cortex-A platforms
-- Low-level system primitives and isolation mechanisms
+```
 
 ## 📋 Quick Start
 
 The project's source code is currently not open-sourced. We have made available certain binary programs compiled using the LARTS kernel.
 
-* How to use Docker to build a runtime environment for pre-compiled binaries ? (Verified)
+- How to use Docker to build a runtime environment for pre-compiled binaries ? (Verified)
 
 ```shell
 # Recommended: Ubuntu 20.04
@@ -49,7 +71,7 @@ sudo apt-get install -y cmake
 sudo apt install -y build-essential bison flex unzip
 sudo apt install -y texinfo
 sudo apt install -y python3.8 python3.8-dev
-sudo apt install -y python-is-python3 
+sudo apt install -y python-is-python3
 sudo apt install -y libgmp-dev libmpfr-dev libmpc-dev
 # C++ Dependencies
 sudo apt-get install -y qemu qemu-user qemu-user-static qemu-system qemu-system-misc binfmt-support
@@ -82,12 +104,12 @@ Commercial and private resources and repositories will not be made public.
 
 The open-source toolchain and libraries currently in use are shared below:
 
-* **RSB**: https://gitlab.rtems.org/rtems/tools/rtems-source-builder.git   (Branch: 5)
-* **Musl-Cross-Make**: https://github.com/richfelker/musl-cross-make.git  (Branch: master)
-* **Loongarch64 Related**: https://github.com/loongson
-  * **binutils & gdb**: https://github.com/loongson/binutils-gdb (Branch: default)
-  * **gcc**: https://github.com/loongson/gcc (Branch: default)
-  * **newlib**: https://github.com/loongson/newlib (Branch: default)
+- **RSB**: https://gitlab.rtems.org/rtems/tools/rtems-source-builder.git (Branch: 5)
+- **Musl-Cross-Make**: https://github.com/richfelker/musl-cross-make.git (Branch: master)
+- **Loongarch64 Related**: https://github.com/loongson
+  - **binutils & gdb**: https://github.com/loongson/binutils-gdb (Branch: default)
+  - **gcc**: https://github.com/loongson/gcc (Branch: default)
+  - **newlib**: https://github.com/loongson/newlib (Branch: default)
 
 Certain private toolchain resources and repositories (e.g., musl ulib) will not be made publicly available at this time. Additional toolchain resources will be made available in due course.
 
@@ -95,13 +117,12 @@ Certain private toolchain resources and repositories (e.g., musl ulib) will not 
 
 Currently available resources:
 
-* [LARTS Demo(armv7&armv8)](https://github.com/Kingsdom005/LARTS/releases/tag/Test)
+- [LARTS Demo(armv7&armv8)](https://github.com/Kingsdom005/LARTS/releases/tag/Test)
 
 We will gradually make more resources available.
 
 ## 🔄 Future Releases
 
-We currently provide partial support for the **Loongarch64 architecture**. Resources related to the Loongson architecture are scheduled for release in February 2026, with plans to support additional architectures and expand functionality in subsequent phases.
+We currently provide partial support for the **Loongarch64 architecture**. Resources related to the Loongson architecture are scheduled for release in March 2026, with plans to support additional architectures and expand functionality in subsequent phases.
 
 All current development and testing is conducted using QEMU. Moving forward, our team will conduct testing on **physical hardware** and publish relevant test data to advance global operating system research and development.
-
