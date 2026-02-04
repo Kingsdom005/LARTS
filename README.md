@@ -86,6 +86,7 @@ git clone https://github.com/Kingsdom005/LARTS.git
 cd ./LARTS
 # For armv7 testing, please refer to ./Armv7/README.md
 # For armv8 testing, please refer to ./Armv8/README.md
+……
 ```
 
 ## 📊 Baselines for Reproduction
